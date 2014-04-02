@@ -33,7 +33,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara'
   gem 'database_cleaner'
   gem 'json_spec'
   gem "mongoid-rspec"
