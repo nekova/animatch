@@ -10,5 +10,5 @@ Dir::glob("data/json/*.json").each do |f|
   title = File.basename(f, '.json')
   json = File.read(f)
   creator = JSON.parse(json)
-  Anime.create(title: title, creator: creator)
+  Anime.find_or_initialize_by(title: title).update(creator: creator)
 end
