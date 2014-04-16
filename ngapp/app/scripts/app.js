@@ -6,11 +6,12 @@ var app = angular.module('app', [
   'ui.bootstrap'
 ]);
 
-app.config(['$locationProvider', function($locationProvider){
-  $locationProvider.html5Mode(true);
-}]);
+// app.config(['$locationProvider', function($locationProvider){
+//   $locationProvider.html5Mode(true);
+// }]);
 
-app.config(['$routeProvider', function ($routeProvider) {
+app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
     $routeProvider
       .when('/', {
         templateUrl: 'views/anime.html',
